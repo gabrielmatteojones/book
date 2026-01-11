@@ -20,4 +20,4 @@ collections:
       - { label: "Dewey Number", name: "dewey", widget: "string" }
       - { label: "Cover Image", name: "copertina", widget: "image" }
       - { label: "Content", name: "body", widget: "markdown" }
-      - { label: "Layout", name: "layout", widget: "hidden", default: "cartella" }
+      - { label: "Layout", name: "layout", widget: "hidden", default: "libri" }
