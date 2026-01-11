@@ -20,5 +20,5 @@ collections:
       - { label: "Data", name: "datapub", widget: "datetime", format: "YYYY-MM-DD" }
       - { label: "Dewey Number", name: "dewey", widget: "string" }
       - { label: "Cover Image", name: "copertina", widget: "image" }
-      - { label: "Content", name: "content", widget: "text" }
+      - { label: "Content", name: "body", widget: "markdown" }
       - { label: "Layout", name: "layout", widget: "hidden", default: "cartella" }
