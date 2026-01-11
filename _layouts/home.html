@@ -2,136 +2,28 @@
 layout: default
 ---
 
-<main class="main">
-  <div class="wrap grid-hero">
-    {% assign hero = site.posts.first %}
-    <article class="card hero">
-      <img src="{{ hero.image | default: 'https://images.unsplash.com/photo-1522199755839-a2bacb67c546?q=80&w=1200&auto=format&fit=crop' }}" alt="hero">
-      <div class="pad">
-        <div class="kicker">{{ hero.category }}</div>
-        <h1 class="title">{{ hero.title }}</h1>
-        <p class="meta">di {{ hero.author | default: "Redazione" }} • {{ hero.date | date: "%d %b %Y" }}</p>
+
+				<main>
+				<div class="page_wrap page_home">
+  <div class="wrap">
+    <div class="welcome">
+      <div class="left">
+        <h1 class="page_title">Welcome</h1>
+        <p><strong>Do you want to read adventure stories? Are you interested in history? How about getting both and sneaking in some stealth-learning too? If so you have come to the right place.</strong></p>
+<p>The greatest challenge is capturing a child’s attention and imagination, once you have that there is so much you can do. We have loads of resources here to help fire up the imagination and feed their curiosity. Whether you are a teacher searching for detailed curriculum plans and resources, or a parent looking for ideas and fun activities, we have a huge range of ideas and materials.</p>
+<p>Come on in and join us!</p>
+
       </div>
-    </article>
-
-    <aside class="side-list">
-      <h3>Ultimi articoli</h3>
-      <div class="list">
-        {% for post in site.posts offset:1 limit:3 %}
-        <a href="{{ post.url }}" class="item">
-          <div class="title">{{ post.title }}</div>
-          <div class="meta">{{ post.date | date: "%d %b %Y" }}</div>
-        </a>
-        {% endfor %}
+      <div class="right">
+        <div class="images">
+          <img decoding="async" src="https://readingriddle.co.uk/wp-content/uploads/2025/06/Longlist-Insta-1-scaled-wpcf_400x400.jpg" />
+          <img decoding="async" src="https://readingriddle.co.uk/wp-content/uploads/2023/03/tut-medal-wpcf_400x400.jpg" />
+          <img decoding="async" src="https://readingriddle.co.uk/wp-content/uploads/2025/06/IMG_9326-scaled-wpcf_400x400.jpg" />
+          <img decoding="async" src="https://readingriddle.co.uk/wp-content/uploads/2025/06/sam-scaled-wpcf_400x400.jpg" />
+        </div>
+        <div class="buttons"><a title="School Visits" class="button" href="https://readingriddle.co.uk/school-visits">School Visits</a><a title="Contact" class="button" href="https://readingriddle.co.uk/contact">Contact</a></div>
       </div>
-    </aside>
-  </div>
-
-  <section class="wrap section">
-    <h2>Tutti i post</h2>
-    <div class="posts grid">
-      {% for post in site.posts %}
-      <article class="post">
-        <img src="{{ post.image | default: 'https://images.unsplash.com/photo-1522199755839-a2bacb67c546?q=80&w=1200&auto=format&fit=crop' }}" alt="">
-        <div class="pad">
-          <h3 class="title">{{ post.title }}</h3>
-          <div class="meta">{{ post.date | date: "%d %b %Y" }}</div>
-        </div>
-      </article>
-      {% endfor %}
     </div>
-  </section>
 
-  <section class="wrap section">
-    <h2>Categorie</h2>
-    <div class="categories">
-      {% for category in site.categories %}
-      <div class="cat"><div>📂</div><span>{{ category[0] }}</span></div>
-      {% endfor %}
-    </div>
-  </section>
 
-  <section class="wrap section">
-    <h2>Circolari</h2>
-    <div class="posts list-only">
-      {% for circ in site.circolari limit:3 %}
-      <article class="post">
-        <div class="pad">
-          <h3 class="title">{{ circ.title }}</h3>
-          <div class="meta">Pubblicata {{ circ.date | date: "%d %b %Y" }}</div>
-        </div>
-      </article>
-      {% endfor %}
-    </div>
-  </section>
-
-  <section class="wrap section">
-    <h2>Approfondimenti</h2>
-    <div class="posts grid">
-      {% for post in site.posts limit:3 %}
-      <article class="post">
-        <img src="{{ post.image | default: 'https://images.unsplash.com/photo-1522199755839-a2bacb67c546?q=80&w=1200&auto=format&fit=crop' }}" alt="">
-        <div class="pad">
-          <h3 class="title">{{ post.title }}</h3>
-          <div class="meta">{{ post.date | date: "%d %b %Y" }}</div>
-        </div>
-      </article>
-      {% endfor %}
-    </div>
-  </section>
 </main>
-
-<style>
-  .wrap { 
-    max-width: 1200px;
-    margin: 0 auto; 
-    padding: 2rem;
-  }
-
-  .grid-hero {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 2rem;
-    margin-bottom: 3rem;
-  }
-
-  .card.hero img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-  }
-
-  .side-list .list .item {
-    display: block;
-    padding: 0.5rem 0;
-    border-bottom: 1px solid #eee;
-  }
-
-  .posts.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 2rem;
-  }
-
-  .posts img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 8px;
-  }
-
-  .categories {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-
-  .cat {
-    display: flex;
-    align-items: center;
-    border: no;
-    padding: 0.5rem 1rem;
-    border-radius: 30px;
-    background: white;
-  }
-</style>

@@ -1,75 +1,16 @@
-<!DOCTYPE html>
-<html lang="it">
+<!doctype html>
+<html lang="{{ page.lang }}">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>{{ site.title }}</title>
-  <style>
-    :root{
-      --bg:#f9fafb;--paper:#ffffff;--ink:#141414;--muted:#6b7280;--brand:#e11d48;--accent:#0ea5e9;--card:#f7f7f8;
-    }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
-    a{color:inherit;text-decoration:none}
-    img{max-width:100%;height:auto;display:block;object-fit:cover}
-    .wrap{max-width:1200px;margin-inline:auto;padding:0 16px}
-    header{background:var(--paper);border-bottom:1px solid #eee;text-align:center;padding:24px 0}
-    .logo img{width:120px;height:auto;margin-inline:auto;margin-bottom:8px}
-    .brand{font-weight:900;font-size:1.4rem}
-    nav{display:flex;gap:18px;justify-content:center;margin-top:12px;flex-wrap:wrap}
-    nav a{padding:10px 6px;font-weight:600;color:#374151}
-    nav a:hover{color:var(--brand)}
-    .main{padding:24px 0}
-    .grid-hero{display:grid;gap:24px}
-    @media(min-width:960px){.grid-hero{grid-template-columns:2fr 1fr}}
-    .card{background:var(--card);border-radius:16px;overflow:hidden;border:1px solid #ececec;display:flex;flex-direction:column}
-    .card img{width:100%;height:300px;object-fit:cover}
-    .card .pad{padding:16px}
-    .kicker{color:var(--brand);text-transform:uppercase;font-weight:800;font-size:.75rem;letter-spacing:.05em}
-    .title{font-size:clamp(1.1rem,1.2rem + 0.6vw,1.6rem);font-weight:800;margin:6px 0 8px}
-    .meta{color:var(--muted);font-size:.85rem}
-    .list{display:grid;gap:12px}
-    .list a{display:grid;grid-template-columns:96px 1fr;gap:12px;align-items:center;padding:8px;border-radius:12px}
-    .list a img{width:96px;height:72px;object-fit:cover;border-radius:8px}
-    .list a:hover{background:#f0f2f5}
-    .section{margin-top:32px}
-    .section h2{font-size:1.2rem;margin:0 0 12px;font-weight:900}
-    .posts{display:grid;gap:16px}
-    @media(min-width:720px){.posts{grid-template-columns:repeat(3,1fr)}}
-    .post{background:var(--paper);border-radius:12px;overflow:hidden;border:1px solid #eee;display:flex;flex-direction:column}
-    .post img{width:100%;height:200px;object-fit:cover}
-    .post .pad{padding:12px 14px}
-    .post .title{font-size:1rem;font-weight:700;margin:4px 0}
-    .post .meta{color:var(--muted);font-size:.8rem}
-    .categories{display:flex;gap:20px;flex-wrap:wrap;justify-content:center}
-    .cat{width:100px;height:100px;border-radius:50%;background:var(--card);display:flex;flex-direction:column;justify-content:center;align-items:center;border:2px solid #ddd;text-align:center;cursor:pointer;transition:.2s}
-    .cat:hover{border-color:var(--brand);background:#fff}
-    .cat span{font-size:.9rem;font-weight:600;margin-top:6px}
-    footer{background:#0f172a;color:#e2e8f0;margin-top:24px}
-    footer .wrap{padding:24px 16px;text-align:center}
-    footer a{color:#e2e8f0}
-  </style>
+  {% include meta.html %}
+  {% include styles.html %}
+  {%- if jekyll.environment == 'production' -%}
+  {%- include analytics/google-analytics.html -%}
+  {%- endif -%}
 </head>
 <body>
-  <header>
-    <div class="logo"><img src="https://gabrieljones.it/assets/logo.png" alt="Logo" /></div>
-    <div class="brand">{{ site.title }}</div>
-    <nav>
-      <a href="/articoli">Articoli</a>
-      <a href="/video">Video</a>
-      <a href="/podcast">Podcast</a>
-      <a href="/serie">Serie</a>
-      <a href="/temi">Temi</a>
-    </nav>
-  </header>
+  {%- include header/header.html -%}
+  
+  {{ content }}
 
-{{ content }}
-
-
-      <footer>
-    <div class="wrap">
-      <small>© {{ site.time | date: '%Y' }} – {{ site.title }}</small>
-    </div>
-  </footer>
 </body>
 </html>

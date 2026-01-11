@@ -1,16 +1,11 @@
 ---
 layout: home
-title: Benvenuto nel blog di Gabriel Matteo Jones
-description:
+title: Homepage di esempio
+description: Questo è un esempio di homepage con utilizzo del componente "hero"
 lang: it
 ref: homepage
 permalink: /
 order: 1
 ---
 
-<main class="container my-4" markdown="1">
-
-{% include posts.html %}
-
-</main>
 
