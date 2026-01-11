@@ -17,7 +17,16 @@ layout: default
 <a href="https://books.google.it/books?vid=ISBN{{ page.isbn }}&redir_esc=y"><p class="title">{{ page.title }}</p></a>
 <p class="subtitle">{{ page.cattegoria }}</p>
 {{ content }}
+<p> {{ page.title }} {{ page.author }} <div class="buy_links">
+<a class="button" href="https://google.com/?{{ page.title }} di {{ page.author }} codice ISBN {{ page.isbn }}">Ricerca Avanzata Google</a>
+  <ul>
+      <li><a href="https://google.com/?{{ page.title }} di {{ page.author }} codice ISBN {{ page.isbn }}">google.com</a></li>
+      <li><a href="https://books.google.it/books?vid=ISBN{{ page.isbn }}&redir_esc=y">Ricerca Avanzata: Google Libri</a></li>
+  </ul>
+</div>
 
+
+</p>
 </div>
 <div class="left">
 <div class="image">
@@ -31,23 +40,6 @@ layout: default
 <p><strong>Author:</strong> {{ page.author }}</p></div>
 <p><strong>Genere Letterario:</strong> {{ page.cattegoria }}</p></div>
 <p><strong>Nome Completo:</strong> {{ page.title }} <b>di {{ page.author }}</b></p></div>
-<div class="buttons">
-
-
-
-
-<div class="buy_links">
-<a class="button" href="https://google.com/?{{ page.title }} di {{ page.author }} codice ISBN {{ page.isbn }}">Ricerca Avanzata Google</a>
-  <ul>
-      <li><a href="https://google.com/?{{ page.title }} di {{ page.author }} codice ISBN {{ page.isbn }}">google.com</a></li>
-      <li><a href="https://books.google.it/books?vid=ISBN{{ page.isbn }}&redir_esc=y">Ricerca Avanzata: Google Libri</a></li>
-  </ul>
-</div>
-
-
-
-
-        </div>
 <p></p></div>
 <p></p></div>
 <p></p></div>
