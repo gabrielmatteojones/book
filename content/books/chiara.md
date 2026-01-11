@@ -3,6 +3,7 @@ title: Chiara
 author: Antonella Lattanzi
 isbn: "9788806265083"
 category: Fiction
+datapub: 2026-01-11
 dewey: "0"
 copertina: https://books.google.com/books?vid=ISBN9788806265083&printsec=frontcover&img=1&zoom=1
 content: Marianna e Chiara crescono a pochi passi, nella Bari popolare degli
