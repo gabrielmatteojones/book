@@ -1,7 +1,7 @@
 ---
 layout: page
 title: OPAC
-Permalink: /OPAC/
+Permalink: "/OPAC/"
 ---
 Il nostro OPAC (Catalogo Online) ti permette di esplorare e consultare facilmente i libri e le risorse disponibili nella nostra biblioteca. Il sito è suddiviso in due sezioni principali, pensate per rispondere alle esigenze di diverse categorie di lettori:
 1. OPAC Base (per adulti)
