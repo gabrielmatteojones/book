@@ -21,3 +21,16 @@ collections:
       - { label: "Cover Image", name: "copertina", widget: "image" }
       - { label: "Content", name: "body", widget: "markdown" }
       - { label: "Layout", name: "layout", widget: "hidden", default: "libri" }
+  - name: "page"
+    label: "page"
+    folder: "_pages"
+    create: true
+    slug: "{{slug}}-gjones"
+    format: "yaml-frontmatter"
+    extension: "md"
+    preview_path: "{{slug}}"
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "page" }
+      - { label: "Titolo", name: "title", widget: "string" }
+      - { label: "Permalink", name: "Permalink", widget: "string" }
+      - { label: "Content", name: "body", widget: "markdown" }
