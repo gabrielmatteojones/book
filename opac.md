@@ -16,6 +16,8 @@ Come navigare nell'OPAC per Bambini:
 Ricerca per età
 Funzionalità aggiuntive:
 Ricerca avanzata
-Navigare nel nostro OPAC è semplice e veloce. Trova i tuoi libri preferiti, prenota in pochi clic e goditi la lettura! Se hai bisogno di assistenza, consulta la sezione 
+Navigare nel nostro OPAC è semplice e veloce. Trova i tuoi libri preferiti, prenota in pochi clic e goditi la lettura! Se hai bisogno di assistenza, consulta la sezione
+
 -----> [OPAC adulti](/opac/adulti/)
+
 -----> [OPAC bambini](/opac/bambini/)
